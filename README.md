@@ -39,7 +39,7 @@ Riemann.send_async([
 To ask the server for a list of events [matching a query string](https://github.com/aphyr/riemann/blob/master/test/riemann/query_test.clj), use `Riemann.query/1`.
 
 ```elixir
-{:ok, events} = Riemann.query('service ~= "my awesome"')
+{:ok, events} = Riemann.query('service =~ "my awesome"')
 #=> events = [%{attributes: %{"build" => "7543"}, description: nil, host: "dax",
 #               metric: nil, service: "my awesome app", state: nil, tags: [],
 #               time: 1430329965, ttl: 60.0},
